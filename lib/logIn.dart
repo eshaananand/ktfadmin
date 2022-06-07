@@ -5,6 +5,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:glass_kit/glass_kit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
+
+import 'package:ktfadmin/Home.dart';
 class LogIn extends StatefulWidget {
   const LogIn({Key? key}) : super(key: key);
 
@@ -156,7 +158,7 @@ class _LogInState extends State<LogIn> {
                                 password: pass
                             ).then((value) => {
                               showLoaderDialog(context),
-                            });
+                            }).whenComplete(() => Navigator.pushReplacement(context,MaterialPageRoute(builder: (BuildContext bs)=>const Home())));
                           } on FirebaseAuthException catch (e) {
                             showDialog(
                                 context: context,
