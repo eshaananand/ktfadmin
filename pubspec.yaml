@@ -43,6 +43,7 @@ dependencies:
   auto_size_text: ^3.0.0
   fluttertoast: ^8.0.9
   http: ^0.13.4
+  qr_code_scanner: ^1.0.0
 
 
 dev_dependencies:

@@ -17,6 +17,7 @@ class LogIn extends StatefulWidget {
 class _LogInState extends State<LogIn> {
   String email="";
   String pass="";
+  bool _passwordVisible = false;
   showLoaderDialog(BuildContext context) {
     AlertDialog alert = AlertDialog(
       backgroundColor: Colors.black54,
@@ -143,12 +144,28 @@ class _LogInState extends State<LogIn> {
                             style: const TextStyle(fontSize: 18, color: Colors.white),
                             cursorColor: Colors.white,
                             keyboardType: TextInputType.name,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                                 icon: Icon(Icons.password,color: Colors.white,),
                                 border: InputBorder.none,
                                 hintText: "Password",
-                                hintStyle: TextStyle(color: Colors.white)),
+                                hintStyle: TextStyle(color: Colors.white),
+                              suffixIcon: IconButton(
+                                icon: Icon(
+                                  _passwordVisible
+                                      ? Icons.visibility
+                                      : Icons.visibility_off,
+                                  color: Colors.white,
+                                ),
+                                onPressed: () {
+                                  setState(() {
+                                    _passwordVisible = !_passwordVisible;
+                                  });
+                                },
+                              ),
+                            ),
                             onChanged: (value)=>pass=value,
+                            obscureText: !_passwordVisible,
+                            obscuringCharacter: '*',
                           ),
                         ),
                         MaterialButton(onPressed: ()async{
