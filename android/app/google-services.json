@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "90210847646",
+    "project_id": "ktf-admin-dev",
+    "storage_bucket": "ktf-admin-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90210847646:android:2c0d6a1316d625d8db648f",
+        "android_client_info": {
+          "package_name": "com.example.ktfadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90210847646-7v3qfiq1tjj1o88qpoetcv177f5kp0nu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1W47VeMqJ68u0RkoJcX4YLo56gj74k10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90210847646-7v3qfiq1tjj1o88qpoetcv177f5kp0nu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
