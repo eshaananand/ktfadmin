@@ -7,6 +7,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:hexcolor/hexcolor.dart';
+import 'package:ktfadmin/profile.dart';
 import 'package:ktfadmin/scanner.dart';
 
 
@@ -133,7 +134,7 @@ class _HomeState extends State<Home> {
             indicatorColor: Colors.white,
           ),
           backgroundColor: Colors.black,
-          title: Text("Home",style: GoogleFonts.sora(color: Colors.white),),
+          title: Text("Admin",style: GoogleFonts.sora(color: Colors.white),),
           centerTitle: true,
           actions: [
             IconButton(onPressed: (){
@@ -154,7 +155,7 @@ class _HomeState extends State<Home> {
             color: Colors.black,
             shape:const CircularNotchedRectangle(), //shape of notch
             notchMargin:
-            5, //notch margin between floating button and bottom appbar
+            6, //notch margin between floating button and bottom appbar
             child: SizedBox(
               height: h(0.078),
               child: Row(
@@ -183,6 +184,10 @@ class _HomeState extends State<Home> {
                       color: Colors.white,
                     ),
                     onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext bs) =>const Profile()));
                     },
                   ),
                 ],
